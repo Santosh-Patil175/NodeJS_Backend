@@ -1,0 +1,29 @@
+<%- include("layout") %>
+
+<h2>Payroll Report</h2>
+
+<table>
+<tr>
+    <th>Name</th>
+    <th>HRA</th>
+    <th>DA</th>
+    <th>Deductions</th>
+    <th>Net Salary</th>
+    <th>Date</th>
+</tr>
+
+<% report.forEach(r => { %>
+<tr>
+    <td><%= r.name %></td>
+    <td><%= r.hra %></td>
+    <td><%= r.da %></td>
+    <td><%= r.deductions %></td>
+    <td><%= r.net_salary %></td>
+    <td><%= r.pay_date %></td>
+</tr>
+<% }) %>
+
+</table>
+
+</body>
+</html>

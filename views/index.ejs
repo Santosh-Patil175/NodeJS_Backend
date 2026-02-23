@@ -1,0 +1,28 @@
+<%- include("layout") %>
+
+<h2>Employees</h2>
+
+<table>
+<tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Department</th>
+    <th>Salary</th>
+    <th>Action</th>
+</tr>
+
+<% employees.forEach(emp => { %>
+<tr>
+    <td><%= emp.name %></td>
+    <td><%= emp.email %></td>
+    <td><%= emp.department %></td>
+    <td><%= emp.basic_salary %></td>
+    <td>
+        <a href="/payroll/<%= emp.id %>">Generate Payroll</a>
+    </td>
+</tr>
+<% }) %>
+
+</table>
+</body>
+</html>
